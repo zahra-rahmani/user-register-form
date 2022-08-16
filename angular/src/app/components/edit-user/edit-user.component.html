@@ -1,0 +1,42 @@
+<div>
+  <div *ngIf="currentUser.id" class="edit-form">
+    <h4 style="margin-left: 30vw;">User</h4>
+    <form  style=" width: 40vw; margin-left : 30vw;">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentUser.name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          [(ngModel)]="currentUser.email"
+          name="email"
+          required
+        />
+      </div>
+      <br>
+  </form>
+  <div style=" width: 40vw; margin-left : 30vw;">
+      <button id="btn1" pButton pRipple type="button" 
+              label="Delete" class="p-button-danger p-button-sm"
+              (click)="deleteUser(currentUser.id)"></button>
+      <button pButton pRipple type="button" 
+              label="Edit" class="p-button-warning p-button-sm"
+              (click)="updateUser(currentUser)"></button> 
+  </div>
+     
+  <div *ngIf="!currentUser.id">
+    <br />
+    <p>Cannot access this User...</p>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.left{
+    position:relative;
+    left: 620px;
+}
+#btn1{
+    margin-right: 5px;
+}
+
+.card{
+    position: relative;
+    left: 10px;
+    right: 10px;
+    margin-bottom: 5px;
+
+}
